@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Paradise Resort</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+<h1>Paradise Resort</h1>
+
+<nav>
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('rooms')">Rooms</button>
+<button onclick="showPage('booking')">Booking</button>
+<button onclick="showPage('login')">Login</button>
+<button onclick="showPage('signup')">Sign Up</button>
+<button onclick="showPage('dashboard')">Dashboard</button>
+</nav>
+</header>
+
+<!-- HOME PAGE -->
+<section id="home" class="page">
+<h2>Welcome to Paradise Resort</h2>
+<p>Luxury rooms, beach view, and amazing service.</p>
+</section>
+
+<!-- ROOMS -->
+<section id="rooms" class="page hidden">
+<h2>Our Rooms</h2>
+
+<div class="room">
+<h3>Standard Room</h3>
+<p>$100 per night</p>
+<button onclick="selectRoom('Standard Room',100)">Book</button>
+</div>
+
+<div class="room">
+<h3>Deluxe Room</h3>
+<p>$180 per night</p>
+<button onclick="selectRoom('Deluxe Room',180)">Book</button>
+</div>
+
+<div class="room">
+<h3>Luxury Suite</h3>
+<p>$300 per night</p>
+<button onclick="selectRoom('Luxury Suite',300)">Book</button>
+</div>
+
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="page hidden">
+<h2>Book Room</h2>
+
+<p id="selectedRoom"></p>
+
+<label>Check In</label>
+<input type="date" id="checkin">
+
+<label>Check Out</label>
+<input type="date" id="checkout">
+
+<button onclick="confirmBooking()">Confirm Booking</button>
+
+</section>
+
+<!-- LOGIN -->
+<section id="login" class="page hidden">
+<h2>Login</h2>
+
+<input type="email" id="loginEmail" placeholder="Email">
+<input type="password" id="loginPassword" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<p id="loginMsg"></p>
+</section>
+
+<!-- SIGNUP -->
+<section id="signup" class="page hidden">
+<h2>Create Account</h2>
+
+<input type="text" id="signupName" placeholder="Name">
+<input type="email" id="signupEmail" placeholder="Email">
+<input type="password" id="signupPassword" placeholder="Password">
+
+<button onclick="signup()">Create Account</button>
+
+<p id="signupMsg"></p>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="page hidden">
+<h2>Your Bookings</h2>
+<div id="bookingList"></div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+```
